@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Header from './components/Header';
-import Content from './components/Content';
+import Content from './components/Content/Content';
 import Total from './components/Total';
 
 const App = () => {
