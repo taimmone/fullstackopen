@@ -1,7 +1,9 @@
 import React from 'react';
 
 const Part = ({ name, exercises }) => (
-  <p>{name} {exercises}</p>
+  <tr>
+    <td>{name}</td> <td align="right">{exercises}</td>
+  </tr>
 );
 
 export default Part;

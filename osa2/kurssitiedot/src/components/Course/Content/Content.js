@@ -10,7 +10,7 @@ const Content = ({ parts }) => (
 
     <strong>
       total of <Total parts={parts} /> exercises
-    </strong>
+      </strong>
   </>
 );
 
