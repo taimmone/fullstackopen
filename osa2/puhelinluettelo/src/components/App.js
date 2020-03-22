@@ -6,8 +6,13 @@ const App = () => {
 
   const addName = (event) => {
     event.preventDefault();
-    setPersons([...persons, { name: newName }]);
-    setNewName('');
+
+    if (persons.find(({ name }) => name === newName)) {
+      alert(`${newName} is already added to phonebook`);
+    } else {
+      setPersons([...persons, { name: newName }]);
+      setNewName('');
+    }
   };
 
   const handleNameInput = (event) => {
@@ -23,7 +28,7 @@ const App = () => {
       </form>
       <h2>Numbers</h2>
       <ul>
-        {persons.map(person => <li key={person.name}>{person.name}</li>)}
+        {persons.map(({ name }) => <li key={name}>{name}</li>)}
       </ul>
     </div>
   );
